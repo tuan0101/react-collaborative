@@ -3,6 +3,7 @@ import Landing from "./scenes/Landing";
 import AboutStaff from "./scenes/About/AboutStaff";
 import AboutMission from "./scenes/About/AboutMission";
 import AboutHistory from "./scenes/About/AboutHistory";
+import Carousel from "./scenes/Carousel";
 
 import { motion } from "framer-motion";
 import LineGradient from "./hooks/LineGradient";
@@ -12,6 +13,15 @@ import useMediaQuery from "./hooks/useMediaQuery";
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
+  const slides = [
+     "assets/photos/slide2.jpg",
+     "assets/photos/slide3.jpg",
+     "assets/photos/slide4.jpg",
+     "assets/photos/slide5.jpg",
+     "assets/photos/slide6.jpg",
+     "assets/photos/slide7.jpg",
+     "assets/photos/slide8.jpg",
+  ]
 
   return (
     <div className="app bg-deep-blue">
@@ -50,6 +60,15 @@ function App() {
         >
           <AboutMission />
         </motion.div>
+      </div>
+
+      <div className="py-10 w-[70%]  mx-auto" >
+        <Carousel>
+          {[
+            ...slides.map((s) =>
+            <img src={s}/>)
+          ]}
+        </Carousel>
       </div>
 
     </div>
