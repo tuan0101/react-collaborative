@@ -5,6 +5,7 @@ import AboutMission from "./scenes/About/AboutMission";
 import AboutHistory from "./scenes/About/AboutHistory";
 import Carousel from "./scenes/Carousel";
 import History from "./scenes/History";
+import Mission from "./scenes/Mission";
 
 import { motion } from "framer-motion";
 import LineGradient from "./hooks/LineGradient";
@@ -75,9 +76,19 @@ function App() {
       </div>
 
       <LineGradient />
-      <History 
-        selectedPage={selectedPage} setSelectedPage={setSelectedPage}
-      />
+      <div  className="w-[90%] mx-auto xs:mt-2">
+        <History 
+          selectedPage={selectedPage} setSelectedPage={setSelectedPage}
+        />
+      </div>
+
+
+      <LineGradient />    
+      <div className="">
+      <Mission 
+          selectedPage={selectedPage} setSelectedPage={setSelectedPage}
+        />
+      </div>
     </div>
   );
 }
