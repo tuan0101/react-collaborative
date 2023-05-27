@@ -18,7 +18,7 @@ const AboutStaff = ({ setSelectedPage }) => {
               src="assets/photos/staff.jpg"
             />
           </div>
-    </div>
+      </div>
       {/* MAIN TEXT */}
       <div className="z-30 basis-2/5 mt-12 md:mt-16">
         {/* HEADINGS */}

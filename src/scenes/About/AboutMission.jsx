@@ -10,7 +10,7 @@ const AboutMission = ({ setSelectedPage }) => {
       className="md:flex md:justify-between md:items-center gap-16 md:h-full"
     >
       {/* IMAGE SECTION */}
-      <div className="basis-4/5 z-10 md:mt-16 flex justify-center md:order-2">
+      <div className="basis-[70%] z-10 md:mt-16 flex justify-center md:order-2">
           <div>
             <img
               alt="profile"

@@ -19,7 +19,12 @@ export default function Carousel({
     return () => clearInterval(slideInterval)
   }, [])
   return (
-    <div className="overflow-hidden relative h-full rounded-2xl">
+    <div>
+      <div className="lg:text-6xl md:text-5xl xs:text-3xl text-center font-playfair text-rose-300 pb-10">
+          MOMENTS OF HOPE: OUR JOURN
+      </div>
+
+      <div className="overflow-hidden relative h-full rounded-2xl">
       <div
         className="flex transition-transform ease-out duration-500 w-full"
         style={{ transform: `translateX(-${curr * 100}%)` }}
@@ -56,5 +61,7 @@ export default function Carousel({
         </div>
       </div>
     </div>
+    </div>
+    
   )
 }

@@ -7,10 +7,10 @@ const AboutHistory = ({ setSelectedPage }) => {
   return (
     <section
       id="staff"
-      className="md:flex md:justify-between md:items-center gap-16 md:h-full"
+      className="md:flex md:justify-between md:items-center gap-16 md:h-full h-full"
     >
       {/* IMAGE SECTION */}
-      <div className="basis-[70%] z-10 md:mt-16 flex justify-center">
+      <div className="basis-[70%] z-10 md:mt-16 flex justify-center ">
           <div>
             <img
               alt="profile"

@@ -4,11 +4,13 @@ import AboutStaff from "./scenes/About/AboutStaff";
 import AboutMission from "./scenes/About/AboutMission";
 import AboutHistory from "./scenes/About/AboutHistory";
 import Carousel from "./scenes/Carousel";
+import History from "./scenes/History";
 
 import { motion } from "framer-motion";
 import LineGradient from "./hooks/LineGradient";
 import { useState } from "react";
 import useMediaQuery from "./hooks/useMediaQuery";
+
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
@@ -42,7 +44,7 @@ function App() {
         </motion.div>
       </div>
       <LineGradient />
-      <div className="w-[90%] mx-auto h-[50%] xs:mt-2">
+      <div className="w-[90%] mx-auto h-[60%] xs:mt-2">
         <motion.div
           margin="0 0 -200px 0"
           amount="all"
@@ -62,6 +64,7 @@ function App() {
         </motion.div>
       </div>
 
+      <LineGradient />
       <div className="py-10 w-[70%]  mx-auto" >
         <Carousel>
           {[
@@ -71,6 +74,10 @@ function App() {
         </Carousel>
       </div>
 
+      <LineGradient />
+      <History 
+        selectedPage={selectedPage} setSelectedPage={setSelectedPage}
+      />
     </div>
   );
 }
