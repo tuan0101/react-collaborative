@@ -13,6 +13,7 @@ import LineGradient from "./hooks/LineGradient";
 import { useState } from "react";
 import useMediaQuery from "./hooks/useMediaQuery";
 import Footer from "./scenes/Footer";
+import Donation from "./scenes/Donation";
 
 
 
@@ -99,6 +100,9 @@ function App() {
           selectedPage={selectedPage} setSelectedPage={setSelectedPage}
         />
       </div>
+
+      <LineGradient />  
+      <Donation setSelectedPage={setSelectedPage} />
 
       <LineGradient />
       <div  className="my-10 pb-12">
