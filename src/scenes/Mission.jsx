@@ -6,7 +6,7 @@ const Mission = ({ setSelectedPage }) => {
     const isAboveLarge = useMediaQuery("(min-width: 1060px)");
     return (
         <section
-            id="staff"
+            id="mission"
 
         >
             <div>

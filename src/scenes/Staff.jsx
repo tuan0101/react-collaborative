@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const Staff = () => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
   return (
-    <section id="skills" className="pt-10 pb-24">
+    <section id="staff" className="pt-10 pb-24">
       <div>
         <h1 className="lg:text-5xl xs:text-4xl text-center font-playfair my-5"> OUR STAFF</h1>
       </div>

@@ -3,7 +3,7 @@
 const History = ({ setSelectedPage }) => {
   return (
     <section
-      id="staff"
+      id="history"
       className="text-center mt-8 md:h-full mb-10"
     >
         <h1 className="md:text-5xl xs:text-3xl font-playfair"> OUR HISTORY</h1>

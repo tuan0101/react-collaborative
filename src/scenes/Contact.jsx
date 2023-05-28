@@ -1,9 +1,9 @@
 
 
-const Footer = ({ setSelectedPage }) => {
+const Contact = ({ setSelectedPage }) => {
     return (
       <section
-        id="staff"
+        id="contact"
         className="text-center pb-30"
       >
           <div>
@@ -28,4 +28,4 @@ const Footer = ({ setSelectedPage }) => {
     );
   };
   
-  export default Footer;
+  export default Contact;

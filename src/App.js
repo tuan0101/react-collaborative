@@ -7,19 +7,21 @@ import Carousel from "./scenes/Carousel";
 import History from "./scenes/History";
 import Mission from "./scenes/Mission";
 import Staff from "./scenes/Staff";
+import Contact from "./scenes/Contact";
+import Donation from "./scenes/Donation";
+import Youtube from "./scenes/Youtube";
 
 import { motion } from "framer-motion";
 import LineGradient from "./hooks/LineGradient";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import useMediaQuery from "./hooks/useMediaQuery";
-import Footer from "./scenes/Footer";
-import Donation from "./scenes/Donation";
-import Youtube from "./scenes/Youtube";
+
 
 
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
+  const [isTopOfPage, setIsTopOfPage] = useState(true);
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const slides = [
      "assets/photos/slide2.jpg",
@@ -31,9 +33,23 @@ function App() {
      "assets/photos/slide8.jpg",
   ]
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY === 0) {
+        setIsTopOfPage(true);
+        setSelectedPage("home");
+      }
+      if (window.scrollY !== 0) setIsTopOfPage(false);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+
   return (
     <div className="app bg-deep-blue">
       <Navbar 
+        isTopOfPage={isTopOfPage}
         selectedPage={selectedPage} setSelectedPage={setSelectedPage}
       />
       <Landing setSelectedPage={setSelectedPage} />
@@ -52,9 +68,9 @@ function App() {
         <motion.div
           margin="0 0 -200px 0"
           amount="all"
-          onViewportEnter={() => setSelectedPage("about")}
+          onViewportEnter={() => setSelectedPage("ourstaff")}
         >
-          <AboutStaff />
+          <AboutStaff setSelectedPage={setSelectedPage}/>
         </motion.div>
       </div>
       <LineGradient />
@@ -62,9 +78,9 @@ function App() {
         <motion.div
           margin="0 0 -200px 0"
           amount="all"
-          onViewportEnter={() => setSelectedPage("about")}
+          onViewportEnter={() => setSelectedPage("ourhistory")}
         >
-          <AboutHistory />
+          <AboutHistory setSelectedPage={setSelectedPage}/>
         </motion.div>
       </div>
       <LineGradient />
@@ -72,9 +88,9 @@ function App() {
         <motion.div
           margin="0 0 -200px 0"
           amount="all"
-          onViewportEnter={() => setSelectedPage("about")}
+          onViewportEnter={() => setSelectedPage("ourmission")}
         >
-          <AboutMission />
+          <AboutMission setSelectedPage={setSelectedPage}/>
         </motion.div>
       </div>
 
@@ -115,7 +131,7 @@ function App() {
 
       <LineGradient />
       <div  className="my-10 pb-12">
-        <Footer 
+        <Contact 
           selectedPage={selectedPage} setSelectedPage={setSelectedPage}
         />
       </div>

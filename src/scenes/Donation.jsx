@@ -9,7 +9,7 @@ const Donation = ({ setSelectedPage }) => {
     const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
     return (
         <section
-            id="home"
+            id="donate"
         //className="md:flex md:justify-between md:items-center"
         >
 
@@ -35,7 +35,7 @@ const Donation = ({ setSelectedPage }) => {
                     </p>
 
                 </div>
-                <AnchorLink
+                {/* <AnchorLink
                             className="absolute top-[35%] left-1/2 -translate-x-1/2 -translate-y-1/2
                 bg-gradient-rainblue text-deep-blue rounded-sm py-3 px-7 font-semibold
               hover:bg-blue hover:text-white transition duration-500"
@@ -43,7 +43,7 @@ const Donation = ({ setSelectedPage }) => {
                             href="#contact"
                         >
                             Learn More
-                        </AnchorLink>
+                        </AnchorLink> */}
                 <div className="absolute md:top-[55%] xs:top-[65%] w-[80%]">
                     <motion.div
                         initial="hidden"

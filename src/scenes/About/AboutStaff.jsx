@@ -6,7 +6,7 @@ const AboutStaff = ({ setSelectedPage }) => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
   return (
     <section
-      id="staff"
+      id="ourstaff"
       className="md:flex md:justify-between md:items-center gap-16 md:h-full"
     >
       {/* IMAGE SECTION */}
@@ -56,8 +56,8 @@ const AboutStaff = ({ setSelectedPage }) => {
           <AnchorLink
             className="bg-gradient-rainblue text-deep-blue rounded-sm py-3 px-7 font-semibold
               hover:bg-blue hover:text-white transition duration-500"
-            onClick={() => setSelectedPage("contact")}
-            href="#contact"
+            onClick={() => setSelectedPage("staff")}
+            href="#staff"
           >
             Learn More
           </AnchorLink>

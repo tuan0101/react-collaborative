@@ -2,18 +2,23 @@ import { useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import useMediaQuery from "../hooks/useMediaQuery";
 
-const Link = ({page, selectedPage, setSelectedPage}) =>{
+const Link = ({ page, selectedPage, setSelectedPage }) => {
     const lowerCasePage = page.toLowerCase();
-    return(
+    return (
         <AnchorLink
-            className={`${selectedPage === lowerCasePage ? "text-yellow" : ""}
-                hover:text-yellow transition duration-500`}
-            hrefl={`#${lowerCasePage}`}
-            onClick={()=> setSelectedPage(lowerCasePage)}>
+            className={`${selectedPage === lowerCasePage ? "text-yellow" : ""
+                } hover:text-yellow transition duration-500`}
+            href={`#${lowerCasePage}`}
+            onClick={() => setSelectedPage(lowerCasePage)}
+        >
             {page}
-        </AnchorLink>)
-}
-const Navbar = ({selectedPage, setSelectedPage}) => {
+        </AnchorLink>
+    );
+};
+
+
+
+const Navbar = ({ selectedPage, setSelectedPage }) => {
     const [isMenuToggled, setIsMenuToggled] = useState(false);
     const isAboveSmallScreen = useMediaQuery("(min-width: 768px)");
 
@@ -26,12 +31,12 @@ const Navbar = ({selectedPage, setSelectedPage}) => {
                 {isAboveSmallScreen ? (
                     <div className="flex justify-between gap-16 font-opensans text-sm font-semibold">
                         <Link
-                            page="About"
+                            page="Home"
                             selectedPage={selectedPage}
                             setSelectedPage={setSelectedPage}
                         />
                         <Link
-                            page="Journey"
+                            page="About"
                             selectedPage={selectedPage}
                             setSelectedPage={setSelectedPage}
                         />
@@ -56,15 +61,15 @@ const Navbar = ({selectedPage, setSelectedPage}) => {
                         className="rounded-full bg-red p-2"
                         onClick={() => setIsMenuToggled(!isMenuToggled)}
                     >
-                        <img src="../assets/menu-icon.svg" alt="menu"/>
-                  </button>
+                        <img src="../assets/menu-icon.svg" alt="menu" />
+                    </button>
                 )}
 
                 {/* mobile menu popu  */}
                 {!isAboveSmallScreen && isMenuToggled && (
                     <div class="fixed right-0 bottom-0 h-full bg-blue w-[300px]">
                         <div className="flex justify-end p-12">
-                            <button onClick={()=> setIsMenuToggled(!isMenuToggled)}>
+                            <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
                                 <img alt="close-icon" src="/assets/close-icon.svg" />
                             </button>
                         </div>
@@ -81,11 +86,11 @@ const Navbar = ({selectedPage, setSelectedPage}) => {
                                 setSelectedPage={setSelectedPage}
                             />
                         </div>
-                    </div>                   
+                    </div>
                 )}
             </div>
         </nav>
     )
-} 
+}
 
 export default Navbar;

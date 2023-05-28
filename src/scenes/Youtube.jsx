@@ -3,7 +3,7 @@
 const Youtube = ({ setSelectedPage }) => {
     return (
         <section
-            id="staff"
+            id="about"
             className=""
         >
             <div class="aspect-w-16 aspect-h-9">
