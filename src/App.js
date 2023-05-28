@@ -14,6 +14,7 @@ import { useState } from "react";
 import useMediaQuery from "./hooks/useMediaQuery";
 import Footer from "./scenes/Footer";
 import Donation from "./scenes/Donation";
+import Youtube from "./scenes/Youtube";
 
 
 
@@ -36,6 +37,14 @@ function App() {
         selectedPage={selectedPage} setSelectedPage={setSelectedPage}
       />
       <Landing setSelectedPage={setSelectedPage} />
+
+      <LineGradient />
+      <div  className="pb-12">
+        <Youtube 
+          selectedPage={selectedPage} setSelectedPage={setSelectedPage}
+        />
+      </div>
+
       <div className="text-5xl font-playfair z-10 text-center pt-5">
         About Us
       </div>

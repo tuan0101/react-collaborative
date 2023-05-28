@@ -2,7 +2,9 @@ import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
-
+const newTab= (url) => {
+    window.open(url)
+}
 const Donation = ({ setSelectedPage }) => {
     const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
     return (
@@ -53,7 +55,9 @@ const Donation = ({ setSelectedPage }) => {
                             visible: { opacity: 1, y: 0 },
                         }}
                     >
-                        <button className="relative mx-auto mb-4 left-[12%] w-[100%] h-[20%]">
+                        <button className="relative mx-auto mb-4 left-[12%] w-[100%] h-[20%]"
+                            onClick={()=> newTab("https://www.paypal.com/donate?token=5bwxJUKJNkblY4DeHr8SVDStqVdn4DkvMusuKQSHI33CpQstmIKM8ZOH6PR0d09wH2kQXJlXA9NPA7MZ")}
+                        >
                             <img
                                 className=" mx-auto w-[30%]
                             hover:filter hover:saturate-200 transition duration-500 z-10"
