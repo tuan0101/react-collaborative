@@ -20,7 +20,7 @@ export default function Carousel({
   }, [])
   return (
     <div>
-      <div className="lg:text-6xl md:text-5xl xs:text-3xl text-center font-playfair text-rose-300 pb-10">
+      <div className="lg:text-5xl md:text-4xl xs:text-3xl text-center font-playfair text-rose-300 pb-10">
           MOMENTS OF HOPE: OUR JOURN
       </div>
 

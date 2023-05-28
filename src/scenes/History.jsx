@@ -4,10 +4,10 @@ const History = ({ setSelectedPage }) => {
   return (
     <section
       id="staff"
-      className="text-center mt-8 md:h-full"
+      className="text-center mt-8 md:h-full mb-10"
     >
-        <h1 className="text-6xl font-playfair"> OUR HISTORY</h1>
-        <div className=" md:mt-8 justify-center">
+        <h1 className="md:text-5xl xs:text-3xl font-playfair"> OUR HISTORY</h1>
+        <div className="md:mt-8 xs:mt-4 justify-center">
             <img
             alt="profile"
             className="hover:filter hover:saturate-200 transition duration-500 mx-auto w-[80%]"
@@ -15,7 +15,7 @@ const History = ({ setSelectedPage }) => {
             />
         </div>
         <div>
-            <h3 className="text-4xl bold pt-3 pb-4 font-mono">The Journey</h3>
+            <h3 className="md:text-4xl xs:text-2xl bold pt-3 pb-4 font-mono">The Journey</h3>
             <div className="text-center font-thin w-[82%] mx-auto text-gray-300">
                 <p className="pt-2">
                     Our non-profit organization has been dedicated to supporting underserved Vietnamese communities in Vietnam. With a clear mission to uplift and empower those in need, we have worked tirelessly to address the challenges faced by these communities. 

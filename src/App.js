@@ -6,11 +6,13 @@ import AboutHistory from "./scenes/About/AboutHistory";
 import Carousel from "./scenes/Carousel";
 import History from "./scenes/History";
 import Mission from "./scenes/Mission";
+import Staff from "./scenes/Staff";
 
 import { motion } from "framer-motion";
 import LineGradient from "./hooks/LineGradient";
 import { useState } from "react";
 import useMediaQuery from "./hooks/useMediaQuery";
+
 
 
 function App() {
@@ -32,7 +34,7 @@ function App() {
         selectedPage={selectedPage} setSelectedPage={setSelectedPage}
       />
       <Landing setSelectedPage={setSelectedPage} />
-      <div className="text-8xl font-playfair z-10 text-center pt-5">
+      <div className="text-5xl font-playfair z-10 text-center pt-5">
         About Us
       </div>
       <div className="w-5/6 mx-auto h-[65%] xs:mt-2">
@@ -86,6 +88,13 @@ function App() {
       <LineGradient />    
       <div className="">
       <Mission 
+          selectedPage={selectedPage} setSelectedPage={setSelectedPage}
+        />
+      </div>
+
+      <LineGradient />    
+      <div className="">
+      <Staff 
           selectedPage={selectedPage} setSelectedPage={setSelectedPage}
         />
       </div>
