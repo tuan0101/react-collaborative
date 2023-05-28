@@ -32,7 +32,7 @@ const AboutMission = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <p className="text-6xl font-playfair z-10 text-center md:text-start">
+          <p className="text-5xl font-playfair z-10 text-center md:text-start">
             Our Misson
           </p>
 
