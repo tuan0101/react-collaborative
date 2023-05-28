@@ -12,6 +12,7 @@ import { motion } from "framer-motion";
 import LineGradient from "./hooks/LineGradient";
 import { useState } from "react";
 import useMediaQuery from "./hooks/useMediaQuery";
+import Footer from "./scenes/Footer";
 
 
 
@@ -95,6 +96,13 @@ function App() {
       <LineGradient />    
       <div className="">
       <Staff 
+          selectedPage={selectedPage} setSelectedPage={setSelectedPage}
+        />
+      </div>
+
+      <LineGradient />
+      <div  className="my-10 pb-12">
+        <Footer 
           selectedPage={selectedPage} setSelectedPage={setSelectedPage}
         />
       </div>
